@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                         Glide.with(MainActivity.this)
                                 .load(newBitmap)
                                 .placeholder(new BitmapDrawable(getResources(), oldBitmap))
+                                .skipMemoryCache(true)
                                 .into(imageView);
                         oldBitmap = newBitmap;
                     } else {
